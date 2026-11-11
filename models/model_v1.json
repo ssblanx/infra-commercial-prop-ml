@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "trained": "2026-11-11",
+  "data": "sberbank_train_raw.csv -> train_pr3.csv (2011-08-20..2014-02-05), 80% по времени",
+  "target": "log1p(price_doc)",
+  "algorithm": "HistGradientBoostingRegressor",
+  "params": {
+    "learning_rate": 0.05,
+    "max_depth": 5,
+    "max_iter": 100,
+    "min_samples_leaf": 50
+  },
+  "cv_rmse_log": 0.463,
+  "selection_rule": "наименьший средний rmse по 5-блочной TimeSeriesSplit cv; разница < 0.005 - берём проще"
+}
